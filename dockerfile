@@ -1,6 +1,7 @@
 FROM python:3-alpine
 
-RUN apk update && apk add tk
+# Instalación de dependencias necesarias
+RUN apk update && apk add tk && apk add font-terminus font-inconsolata font-dejavu font-noto font-noto-cjk font-awesome font-noto-extra
 
 WORKDIR /app
 
