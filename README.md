@@ -33,12 +33,13 @@ CMD ["python", "/app/calculadoraGrafica.py"]
 ### Convertir dockefile en una imagen
 
 Una vez tenemos nuestro dockerfile creado deberemos crear la imagen con el siguiente comando `docker build -t my-python-sandbox .` con el parámetro `-t` indicamos a continuación el nombre de la imagen(tag) y con `.` especicamos el contexto de la construcción de la imagen se encuentra en el directorio actual.
+
 ![Docker build](images/docker-build.png)
 
 
 ### Ejecución del contenedor
 Es posible que necesitemos instalar las siguientes dependencias:
-`sudo apt-get install x11-xserver-utils`
+`sudo apt install x11-xserver-utils`
 
 Primero debemos dar permisos a docker para que pueda usar el servicio de entorno gráfico de la máquina anfitrión:
 `xhost +local:docker`
